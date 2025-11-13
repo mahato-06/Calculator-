@@ -1,0 +1,101 @@
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+   background-color: #f0f0f0;
+   margin: 0;
+   font-family: Arial, sans-serif;
+}
+
+.calculator {
+
+   border: 1px solid #ccc;
+   border-radius: 12px;
+   padding: 20px;
+   background-color: #333;
+   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+   width: 300px;
+}
+
+#display {
+   width: 95%;
+   height: 60px;
+   margin-bottom: 20px;
+   padding: 10px;
+   font-size: 2.5em;
+   text-align: right;
+   border: none;
+   border-radius: 8px;
+   background-color: #eee;
+   color: #333;
+   box-sizing: border-box;
+
+}
+
+.buttons {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr) 1fr;
+   grid-template-rows: auto auto;
+   gap: 10px;
+   max-width: 800px;
+   margin: auto;
+}
+
+
+.btn {
+   padding: 20px;
+   font-size: 1.2em;
+   border: none;
+   border-radius: 8px;
+   background-color: #555;
+   color: white;
+   cursor: pointer;
+   transition: background-color 0.2s;
+}
+
+.btn:hover {
+   background-color: #777;
+}
+
+/* Operator and Clear/Equal styles */
+.btn-operator {
+   background-color: #ff9500;
+}
+
+.btn-operator:hover {
+   background-color: #f7b04f;
+}
+
+.btn-clear,
+.btn-backspace {
+   background-color: #a5a5a5;
+   color: black;
+}
+
+.btn-clear:hover,
+.btn-backspace:hover {
+   background-color: #c9c9c9;
+}
+
+/* The equals button takes up two rows */
+.btn-equal {
+
+   grid-column: 4;
+   grid-row: 1 / span 2;
+   padding: 20px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   font-weight: bold;
+   background-color: #ff3b30;
+}
+
+.btn-equal:hover {
+   background-color: #ff6a60;
+}
+
+/* The zero button spans two columns */
+.btn-zero {
+   grid-column: span 2;
+}
